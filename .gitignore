@@ -1,5 +1,4 @@
 # The fernet_ket should be unique, so don't share it.
-fernet_key.txt
 tokens.txt
 
 # Created by .ignore support plugin (hsz.mobi)
