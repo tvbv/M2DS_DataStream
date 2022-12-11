@@ -38,10 +38,11 @@ def add_token(username, token_encoded):
 def get_bearer_token():
     username = get_username()
     token = query_token(username)
+    new_user = False
     if token is None:
+        new_user = True
         token = ask_for_token()
-        add_token(username, token)
-    return username, token
+    return username, token, new_user
 
 
 def remove_token(username):
