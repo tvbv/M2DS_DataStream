@@ -1,5 +1,4 @@
-# The fernet_ket should be unique, so don't share it.
-tokens.txt
+token/token.txt
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template

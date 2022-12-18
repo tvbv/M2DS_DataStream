@@ -1,0 +1,10 @@
+Tesla
+stock
+action
+buy
+sell
+price
+market
+share
+invest
+money
