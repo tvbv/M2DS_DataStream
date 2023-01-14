@@ -51,10 +51,12 @@ def create_csv(ticker, interval, start_date=None, end_date=None, period=None):
 
 
 if __name__ == '__main__':
-    tickers_list = ['APPL', 'AMZN', 'NFLX', 'GOOG', 'FB', 'MSFT', 'TSLA', 'NVDA', 'ADBE', 'TWTR']
+    """tickers_list = ['APPL', 'AMZN', 'NFLX', 'GOOG', 'FB', 'MSFT', 'TSLA', 'NVDA', 'ADBE', 'TWTR']
     tickers_list.sort()  # actually not needed, just for readability
     for ticker in tickers_list:
         print(f'Creating csv for {ticker}')
         for interval in intervals:
             for period in periods:
-                create_csv(ticker, interval, period=period)
+                create_csv(ticker, interval, period=period)"""
+    # Google every 2 minutes, from 2023-01-04 to 2023-01-10 17h (5 pm)
+    create_csv('GOOG', '2m', start_date=datetime(2023, 1, 4), end_date=datetime(2023, 1, 10, 17))
