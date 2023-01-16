@@ -4,10 +4,34 @@ import os
 import yfinance as yf
 
 
+# Periods to fetch the data
 periods = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max']
+# Intervals to fetch the data
 intervals = ['1m', '2m', '5m', '15m', '30m', '60m', '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo']
 
+
 def get_ticker(ticker, interval, start_date=None, end_date=None, period=None):
+    """
+    Get the ticker data from yahoo finance
+
+    Parameters
+    ----------
+    ticker : str
+        The ticker to get the data
+    interval : str
+        The interval to get the data
+    start_date : datetime
+        The start date to get the data
+    end_date : datetime
+        The end date to get the data
+    period : str
+        The period to get the data
+
+    Returns
+    -------
+    DataFrame
+        The ticker data
+    """
     if start_date is None and end_date is None:
         if period is None:
             raise Exception('Either start and end dates or a period must be specified, but both are None')
@@ -39,10 +63,31 @@ def get_ticker(ticker, interval, start_date=None, end_date=None, period=None):
 
 
 def create_csv(ticker, interval, start_date=None, end_date=None, period=None):
+    """
+    Create a csv file with the ticker data from yahoo finance
+
+    Parameters
+    ----------
+    ticker : str
+        The ticker to get the data
+    interval : str
+        The interval to get the data
+    start_date : datetime
+        The start date to get the data
+    end_date : datetime
+        The end date to get the data
+    period : str
+        The period to get the data
+
+    Returns
+    -------
+    DataFrame
+        The ticker data
+    """
     if not os.path.exists('datasets'):
         os.makedirs('datasets')
     data = get_ticker(ticker, interval, start_date, end_date, period)
-    # save only if there is data
+    # Save only if there is data
     if len(data) > 0:
         min_date = data.index.min().strftime('%Y-%m-%d')
         max_date = data.index.max().strftime('%Y-%m-%d')
