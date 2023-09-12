@@ -99,8 +99,7 @@ python stock_mock_API.py
 
 ## Results
 
-The resuls can be seen in [stream_learning_demo.PNG](stream_learning_demo.PNG) and 
-[stream_learning_essai_1.PNG](stream_learning_essai_1.PNG).
+The resuls can be seen in [the presentation slides](https://github.com/tvbv/M2DS_DataStream/blob/main/DSP_pr%C3%A9sentation%20Bersani-Gensbittel-Lermite.pdf) of the project.
 
 ## References
 
