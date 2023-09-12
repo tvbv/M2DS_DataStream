@@ -1,7 +1,7 @@
 # Stock forecasting with stream-learning neural networks
 
-This project is a team project for the Data Stream Processing's course at Ecolze Polytechnique. 
-The goal is to predict the stock market using stream-learning neural networks.
+This project is a team project for the Data Stream Processing's course at Ecole Polytechnique. 
+The goal is to predict the stock market using stream-learning neural networks helped with nlp integration of twitter sentiment estimation.
 
 ## Table of contents
 
